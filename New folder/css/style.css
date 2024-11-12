@@ -1,0 +1,458 @@
+
+       
+*
+{
+    margin: 0;
+    padding: 0;
+    
+    font-family: Arial, sans-serif;
+}
+body {
+  display:flex;
+}
+/* grid system */
+.container {
+  position:relative;
+  display: grid;
+  grid-template-columns: 951px 951px ;
+  grid-template-rows: 750px 526px 600px 600px 600px 500px 152px;
+  grid-template-areas:
+    "first_grid first_grid"
+    "second_grid third_grid"
+    "fourth_grid fourth_grid"
+    "fifth_grid sixth_grid"
+    "seventh_grid seventh_grid"
+    "eigth_grid ninth_grid"
+    "tenth_grid tenth_grid";
+}
+
+/* mobile grid system */
+@media only screen and (max-width: 1200px) {
+  .container {
+    width:auto;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    grid-template-rows: 1.25fr 0.87fr 1fr 1fr 1fr 0.83fr 0.25fr;
+    grid-template-areas:
+    "first_grid first_grid"
+    "second_grid third_grid"
+    "fourth_grid fourth_grid"
+    "fifth_grid sixth_grid"
+    "seventh_grid seventh_grid"
+    "eigth_grid ninth_grid"
+    "tenth_grid tenth_grid";
+  }
+}
+/* grid areas */
+.first_grid {
+  grid-area: first_grid;
+}
+.third_grid {
+  grid-area: third_grid;
+}
+.second_grid {
+  grid-area: second_grid;
+}
+.fourth_grid {
+  grid-area: fourth_grid;
+}
+.fifth_grid {
+  grid-area: fifth_grid;
+}
+.seventh_grid {
+  grid-area: seventh_grid;
+}
+.eigth_grid {
+  grid-area: eigth_grid;
+}
+.ninth_grid {
+  grid-area: ninth_grid;
+}
+.tenth_grid {
+  grid-area: tenth_grid;
+  background: #FAFAFA
+}
+.sixth_grid {
+  background:#FAFAFA;
+  grid-area: sixth_grid;
+}
+
+a {
+  
+  display: block;
+  font-family: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  
+}
+.container .item
+{
+    position:relative;
+}
+.container .item img{
+
+  position:absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  object-fit:cover;
+}
+
+/* header items,overlay, and animation */
+.header .overlay {
+  display: flex;
+          
+  flex-direction: column;
+  align-items: center;
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);        
+  color: #663399;  
+}
+.header .overlay img{
+  display: flex;
+  position:relative;  
+  top: -250px;
+  left: -100%;    
+}
+.header{
+  
+  opacity: 0; /* Start with opacity 0 for fade-in effect */
+  animation: fadeIn 2s ease-in forwards; /* 2-second fade-in animation */
+  
+}
+.header .overlay h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.header .button {
+  padding: 20px 20px;
+  background-color: #FF5722;
+  color: white;
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  width: 150px;
+  height:20px;
+  text-align: center;
+    
+}
+.header .button:hover {
+  background-color: #E64A19;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* logo for header */
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  
+  z-index: 1; 
+    
+}
+/* any section that does not require an overlay, includes text box, h1,h2,stars */
+.non_overlay 
+{
+  display: flex;
+  flex-wrap:row wrap;        
+  gap: 20px;          
+  padding-left:42%;
+  padding-top:10.5%;    
+}
+
+.non_overlay .text-box {      
+  margin-right: 80px;
+  width:auto;            
+}
+
+.non_overlay .text-box h1 {
+  color: #663399;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.non_overlay .text-box h2 {
+  color: #333;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+    
+}
+
+.non_overlay .text-box p {
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.6;
+    
+}
+
+.non_overlay .text-box a {
+  color: #663399;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.non_overlay .text-box a:hover {
+  text-decoration: underline;
+    
+}
+.non_overlay .stars{
+  color: #FF5722;
+  font-size: 35px
+}
+
+        
+/* any section needing an overlay, includes an overlay of h1 and button */        
+.overlay_section .overlay {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  padding-left:21%;
+  padding-top:5.25%; 
+  position: absolute;
+  color: #663399;
+  text-align: left;
+}
+
+.overlay_section .overlay h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+.overlay_section .button {
+  padding: 20px 20px;
+  background-color: #FF5722;
+  color: white;
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  width: 150px;
+  height:20px;
+  text-align: center;
+}
+.overlay_section .button:hover {
+  background-color: #E64A19;
+}
+
+/* for the section that requires an overlay but the text,button,etc is needed on the opposite side of the row */
+.flipped_overlay_section .overlay {
+  display: grid;
+  grid-template-columns: 1fr;
+  
+  align-items: center;
+  padding-left:57%;
+  padding-top:5.25%;    
+  position: absolute;
+  
+  color: #663399;
+  text-align: left;
+}
+
+.flipped_overlay_section .overlay h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+.flipped_overlay_section .button {
+  padding: 20px 20px;
+  background-color: #FF5722;
+  color: white;
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  width: 150px;
+  height:20px;
+  text-align: center;
+    
+}
+.flipped_overlay_section .button:hover {
+    background-color: #E64A19;
+}
+.flipped_overlay_section .overlay p {
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    
+}
+
+/* icon text and images */
+.icon-section {
+  max-width: 55%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-wrap:column wrap;
+  gap: 20px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.icon-item {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 100%;
+  margin-top: 20px;
+  padding-top:20px;  
+}
+
+.icon-item img {
+  max-width: 100px;
+  height: 100px;
+  
+  border: 1px solid #6A0DAD; /* Purple border */
+  border-radius: 50%;
+  padding: 15px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+    
+}
+
+.icon-item p {
+  font-size: 1em;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.icon-item:hover img {
+  transform: scale(1.1); /* Slight zoom-in effect */
+}
+
+.icon:hover p {
+  color: #800080; /* Change to your preferred color */
+}
+
+/* carousel section, includes all observed items including dots, and arrows */
+.carousel {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    position: relative;
+    height: 60%;
+}
+
+.carousel-content {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Smooth transition */
+    position: absolute;
+    width: 100%;
+}
+.carousel-content.active {
+    opacity: 1; /* Visible slide */
+}
+.carousel-content h3 {
+    color: #7d3b91;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.carousel-content p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    
+    font-size: 24px;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    color: #7d3b91;
+    transform: translateY(-50%);
+}
+
+.prev {
+  left:-40px;
+}
+
+.next {
+  right: -40px;
+}
+
+.indicators {
+  padding-left:30%;
+  margin-top: -40px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: #f0c800;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    
+}
+
+.dot.active {
+    background-color: #7d3b91;
+}
+
+/* social media section, facebook,instagram */
+.social {
+  text-align: center;
+  padding: 1em 0;   
+}
+.social a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+.social .image-link .instagram img {
+  width: 42px;
+  height:42px;  
+  margin-left: 47.5%;
+  margin-top: 60px;
+}
+.social .image-link .facebook img {
+    width: 42px;
+    height:42px;     
+    margin-left: 50.5%;
+    margin-top: 60px;
+  }
+.social .image-link img {
+  transition: transform 0.3s ease, filter 0.3s ease; 
+}
+
+.social .image-link img:hover {
+  transform: scale(1.1); 
+  filter: brightness(1.2); 
+}
+        
+        
+        
+         
+
+
+
