@@ -1,74 +1,17 @@
-# front-end-dev-test
+Hello,
+Hope you are doing well. I'm Alexandr Znamensky. Here are my answers to the three given questions:
 
-## Intro
 
-Congratulations on making it to the testing phase of the hiring process! For this part, we would like to learn about your creativity, how well you code, and how well you follow instructions.
+Questions:
+1. What you technologies you used and why (if you only used html, css, and js please explain any templates or frameworks you may have used i.e. bootstrap)
 
-You will need to have knowledge of some key things before you start:
-  - how to run a local server
-  - how to connect your markup to your scripts and styles
-  - front end web development
+2. Any struggles you faced when developing with technology you chose
 
-We have supplied an optional development server and some development dependencies for this project, but feel free to use the development framework of your choice (e.g. create-react-app, vue cli, etc). You are not required to use the codebase provided in this repository, but feel free to use it! If you choose to use this codebase, you can run the development server using the commands found below:
+3. What you enjoyed the most and why
 
-<pre>
-  npm install
-  npm start
-</pre>
+Answers:
+1. I primarily used html, css, and javascript since I am most familiar with them. I may have used boostrap since boostrap would save time on some of the functionality of the website (carousel as an example). 
 
-<em>NOTE: You will need node and npm on your machine if you choose to use the supplied server, also for hosting you will need to set it up yourself.</em>
+2. Using purely html and css was very time consuming. Also, implementing an adequate grid system was a struggle for me since I was not very familiar with the concept. 
 
-## Instructions
-
-The goal of this project is to create a client website that has some key features requested by the client (i.e. Rooster Grin as the client).
-
-Please clone this repo and submit a link to the new project's repo along with any instructions for viewing the final product. It is not required to host this project anywhere, but it would be nice to view your project via a link rather than having to run the build locally.
-
- A .jpg of the mockup and the assets are in the provided .zip folder.
-
-## Requirements
-
-<em>Please read through ALL the requirements before starting your project</em>
-
-<strong>Below are the design requirements:</strong>
-
-  1. Mockups are followed
-  2. Carousel in last section
-  3. Attention to detail
-  4. Mobile Responsive
-  5. Animations
-
-Though the main requirement is to follow the mockups, we don't require that it to be pixel perfect. We encourage you to be creative as well with this test, you have some design freedom with the assets provided and feel free to add as many animations as you like. We usually face a lot of ambiguity when developing and designing for our clients so we have left some things up to you to see how you design.
-
-<strong>Below are the technical requirements:</strong>
-
-  1. Modular and concise code
-  2. Fully functional capabilities of built features
-      - We should not be seeing errors when we click on buttons
-  3. Understanding best practices of web development
-      - Naming conventions and styling
-  4. Best use of images and assets
-  5. Use of a grid system
-
-As for the technology that you should use its up to you. 😎
-
-### Required Features:
-
-These required features are requested specifically by the client and should be implemented.
-
-  1. Fade In Effect for the hero title
-  2. Subtle animation on the four icons
-  3. Fully Functional Site
-
-### Bonus (optional) Features:
-  1. Use of dev server
-  2. Front end framework
-  3. Dynamic backend from a CMS
-
-### *Please also submit a small write up discussing (leave answers to a sentence or two):*
-
-  1. What you technologies you used and why (if you only used html, css, and js please explain any templates or frameworks you may have used i.e. bootstrap)
-  2. Any struggles you faced when developing with technology you chose
-  3. What you enjoyed the most and why
-
-If you have any questions please feel free to email me (Sebastian) at sebastian@roostergrin.com
+3. I enjoyed learning new things such as implementing a “display grid” and working on the carousel’s behavior. I also worked on a dark-mode feature; however, it didn’t look very good since the pictures are bright and it set a Halloween tone (default orange and purple colors combined with black).
